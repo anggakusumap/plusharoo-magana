@@ -6,13 +6,28 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+    return Inertia::render('Home');
+})->name('home');
+
+Route::get('/about', function () {
+    return Inertia::render('About');
+})->name('about');
+
+Route::get('/products', function () {
+    return Inertia::render('Products/Index');
+})->name('products.index');
+
+Route::get('/products/{slug}', function ($slug) {
+    return Inertia::render('Products/Show', ['slug' => $slug]);
+})->name('products.show');
+
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+})->name('contact');
+
+Route::get('/faq', function () {
+    return Inertia::render('FAQ');
+})->name('faq');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -24,4 +39,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
