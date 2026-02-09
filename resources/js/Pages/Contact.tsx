@@ -6,7 +6,7 @@ import { Textarea } from '@/Components/ui/textarea';
 import { Label } from '@/Components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/Components/ui/card';
 import { Badge } from '@/Components/ui/badge';
-import { Mail, MessageCircle, Instagram, MapPin, Send } from 'lucide-react';
+import { Mail, MessageCircle, Instagram, MapPin, Send, Package, Truck, Globe } from 'lucide-react';
 import { useForm } from '@inertiajs/react';
 import { FormEventHandler } from 'react';
 import { motion } from 'framer-motion';
@@ -101,16 +101,21 @@ export default function Contact() {
 
                             {/* Shipping Info */}
                             <div className="bg-accent/30 p-6 rounded-2xl border border-accent">
-                                <h3 className="text-lg font-bold text-foreground mb-4">📦 Shipping Information</h3>
+                                <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+                                    <Package className="h-5 w-5 text-primary" /> Shipping Information
+                                </h3>
                                 <ul className="space-y-2 text-muted-foreground text-sm">
-                                    <li className="flex gap-2">
-                                        <span>🚚</span> We offer domestic and international shipping.
+                                    <li className="flex gap-2 items-start">
+                                        <Truck className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
+                                        <span>We offer domestic and international shipping.</span>
                                     </li>
-                                    <li className="flex gap-2">
-                                        <span>📦</span> Methods include National courier, Instant/Same Day.
+                                    <li className="flex gap-2 items-start">
+                                        <Package className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
+                                        <span>Methods include National courier, Instant/Same Day.</span>
                                     </li>
-                                    <li className="flex gap-2">
-                                        <span>🌍</span> International shipping available upon request.
+                                    <li className="flex gap-2 items-start">
+                                        <Globe className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
+                                        <span>International shipping available upon request.</span>
                                     </li>
                                 </ul>
                             </div>

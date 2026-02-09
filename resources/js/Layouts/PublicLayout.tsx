@@ -5,6 +5,7 @@ import { Button } from "@/Components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/Components/ui/sheet";
 import { cn } from "@/lib/utils";
 import Footer from "@/Components/Footer";
+import { WhatsAppButton } from "@/Components/WhatsAppButton";
 
 export default function PublicLayout({
     children,
@@ -124,6 +125,7 @@ export default function PublicLayout({
 
             {/* Footer */}
             <Footer />
+            <WhatsAppButton />
         </div>
     );
 }

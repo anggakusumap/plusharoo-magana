@@ -1,5 +1,5 @@
 import { Button } from "@/Components/ui/button";
-import { ArrowRight, Heart } from "lucide-react";
+import { ArrowRight, Heart, Sparkles } from "lucide-react";
 
 export default function Hero() {
     return (
@@ -49,16 +49,20 @@ export default function Hero() {
                         <div className="relative z-10 bg-secondary/20 rounded-[3rem] p-8 md:p-12 rotate-3 hover:rotate-0 transition-transform duration-500 ease-out-expo">
                             <div className="aspect-[4/5] bg-white rounded-3xl shadow-2xl flex items-center justify-center p-8 relative overflow-hidden group">
                                 <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent" />
-                                <span className="text-[12rem] relative z-10 animate-float drop-shadow-xl">
-                                    🧸
-                                </span>
+                                <div className="relative z-10 animate-float drop-shadow-xl">
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1559454403-b8fb87521bc7?q=80&w=800&auto=format&fit=crop" 
+                                        alt="Plush Toy" 
+                                        className="w-48 h-48 object-cover rounded-2xl"
+                                    />
+                                </div>
                                 
                                 {/* Floating elements */}
                                 <div className="absolute top-10 right-10 p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg animate-bounce-slow">
-                                    <span className="text-2xl">✨</span>
+                                    <Sparkles className="h-6 w-6 text-amber-400" />
                                 </div>
                                 <div className="absolute bottom-20 left-10 p-3 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg animate-bounce-slower">
-                                    <span className="text-xl">❤️</span>
+                                    <Heart className="h-5 w-5 text-rose-500 fill-current" />
                                 </div>
                             </div>
                         </div>

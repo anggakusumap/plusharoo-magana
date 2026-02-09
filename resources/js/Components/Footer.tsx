@@ -1,5 +1,5 @@
 import { Link } from '@inertiajs/react';
-import { MapPin, Phone, Mail, Globe, Instagram, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Globe, Instagram, MessageCircle, Heart } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -101,7 +101,7 @@ export default function Footer() {
                 
                 <div className="mt-16 border-t border-background/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
                     <p>&copy; {new Date().getFullYear()} PlushAroo. All rights reserved.</p>
-                    <p>A brand under PT Magana Danamahanta • Made with ❤️ in Indonesia</p>
+                    <p className="flex items-center gap-1">A brand under PT Magana Danamahanta • Made with <Heart className="h-3 w-3 text-red-500 fill-current" /> in Indonesia</p>
                 </div>
             </div>
         </footer>
