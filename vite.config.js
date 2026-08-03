@@ -8,9 +8,17 @@ export default defineConfig({
         laravel({
             input: 'resources/js/app.tsx',
             refresh: true,
+            detectTld: false,
         }),
         react(),
     ],
+    server: {
+        host: 'localhost',
+        https: false,
+        hmr: {
+            host: 'localhost',
+        },
+    },
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './resources/js'),
